@@ -55,10 +55,10 @@ class JunctionWest {
             };
             let k = y + offset;
             if (k < 0) {
-                k = 0
+                k = Math.random() < 0.5 ? 0 : 1;
             };
             if (k > this.grid.length - 1) {
-                k = this.grid.length - 1
+                k = Math.random() < 0.5 ? this.grid.length - 1 : this.grid.length - 2;
             }
             this.grid[count][k] = 'hole';
             if (flag[0]) {
