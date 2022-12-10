@@ -9,3 +9,7 @@ shifts: a variance value that for each shift will change the y value by 1 up or 
 By no means is this done, however this is merely an exploratory branching concept I've come up with, and wish to expand on. For what may I use this for? I don't know. Just thought it was an interesting concept.
 
 
+![download](https://user-images.githubusercontent.com/97923189/206877623-e08f67ed-1b6c-4bd6-89ec-ea8613a82adf.png)
+Here, the branches near the top have less shifts, and the ones near the bottom have more. the shifts are, 10, 25, 50, 75, 100. As you can see more shifts = more variance.
+
+
