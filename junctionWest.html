@@ -70,9 +70,6 @@ class JunctionWest {
 let jw = new JunctionWest(100, 100);
 
 requestAnimationFrame(function draw() {
-    canvas.oncontextmenu = function(e) {
-        e.preventDefault();
-    };
     if (canvas.width !== window.innerWidth || canvas.height !== window.innerHeight) {
         update();
     };
