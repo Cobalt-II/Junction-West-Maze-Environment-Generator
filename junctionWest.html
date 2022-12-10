@@ -39,8 +39,9 @@ class JunctionWest {
             picks.push(count);
         };
         for (let count = 0; count < shifts; count++) {
-            let choice = picks[Math.floor(Math.random() * picks.length)];
-            picks.splice(choice, 1);
+            let o = Math.floor(Math.random() * picks.length);
+            let choice = picks[o];
+            picks.splice(o, 1);
             options.push([choice, Math.random() < 0.5 ? 1 : -1]);
         };
 
