@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Branching</title>
-    <style>html,body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        }
-     </style>
-   </head>
-  <body>
-    <canvas id="canvas">
-    </canvas>
-<script>
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext("2d");
 canvas.height = window.innerHeight;
@@ -31,11 +16,11 @@ class JunctionWest {
             length: width
         }, () => ('fill'))));
     };
-    branch(x, y, shifts, type) {
+    branch(x, y, shifts, type, length) {
         let picks = [];
         let options = [];
         let offset = 0;
-        for (let count = x; count < this.grid[x].length; count++) {
+        for (let count = x; count < x + length; count++) {
             picks.push(count);
         };
         for (let count = 0; count < shifts; count++) {
@@ -55,7 +40,7 @@ class JunctionWest {
             }
         };
 
-        for (let count = x; count < this.grid[x].length; count++) {
+        for (let count = x; count < x + length; count++) {
             let flag = [0, 1];
             for (let c = 0; c < options.length; c++) {
                 if (options[c][0] === count) {
@@ -78,7 +63,7 @@ class JunctionWest {
     }
 };
 
-let jw = new JunctionWest(100, 100);
+let jw = new JunctionWest(15, 15);
 
 requestAnimationFrame(function draw() {
     if (canvas.width !== window.innerWidth || canvas.height !== window.innerHeight) {
@@ -99,6 +84,3 @@ requestAnimationFrame(function draw() {
     }
     requestAnimationFrame(draw);
 });
-</script>
-  </body>
-</html>
