@@ -31,7 +31,7 @@ class JunctionWest {
             length: width
         }, () => ('fill'))));
     };
-    branch(x, y, shifts) {
+    branch(x, y, shifts, type) {
         let picks = [];
         let options = [];
         let offset = 0;
@@ -42,7 +42,17 @@ class JunctionWest {
             let o = Math.floor(Math.random() * picks.length);
             let choice = picks[o];
             picks.splice(o, 1);
-            options.push([choice, Math.random() < 0.5 ? 1 : -1]);
+            switch (type) {
+                case 1:
+                    options.push([choice, Math.random() < 0.5 ? 1 : -1]);
+                    break;
+                case 2:
+                    options.push([choice, 1]);
+                    break;
+                case 3:
+                    options.push([choice, -1]);
+                    break;
+            }
         };
 
         for (let count = x; count < this.grid[x].length; count++) {
