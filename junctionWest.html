@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Branching</title>
-    <style>html,body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        }
-     </style>
-   </head>
-  <body>
-    <canvas id="canvas">
-    </canvas>
-<script>
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext("2d");
 canvas.height = window.innerHeight;
@@ -21,6 +6,20 @@ canvas.width = window.innerWidth;
 function update() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+};
+
+function dir(p1, p2, affect) {
+    let flag = 0;
+    for (let c = -1; c < 2; c++) {
+        for (let k = -1; k < 2; k++) {
+            if (p1 + c > -1 && p2 + k > -1 && p1 + c < affect.length && p2 + k < affect[p1].length) {
+                if (affect[p1 + c][p2 + k] === 'hole') {
+                    flag++;
+                }
+            }
+        }
+    }
+    return flag;
 };
 
 class JunctionWest {
@@ -54,7 +53,6 @@ class JunctionWest {
                     break;
             }
         };
-
         for (let count = x; count < x + length; count++) {
             let flag = [0, 1];
             for (let c = 0; c < options.length; c++) {
@@ -75,10 +73,39 @@ class JunctionWest {
                 this.grid[count][k - flag[1]] = 'hole';
             }
         }
+    };
+    erode(type) {
+        let options = [];
+        for (let count = 0; count < this.grid.length; count++) {
+            for (let coun = 0; coun < this.grid[count].length; coun++) {
+                let flag = dir(count, coun, this.grid);
+                switch (type[0]) {
+                    case 1:
+                        if (flag > 7) {
+                            this.grid[count][coun] = 'fill';
+                        };
+                        break;
+                    case 2:
+                        if (flag > 7) {
+                            options.push([count, coun]);
+                        };
+                }
+            }
+        };
+        if (type[0] === 2) {
+            for (let count = 0; count < options.length / (1 / type[1]); count++) {
+                let u = Math.floor(Math.random() * options.length);
+                let flag = dir(options[u][0], options[u][1], this.grid);
+                if (flag > 7) {
+                    this.grid[options[u][0]][options[u][1]] = 'fill'
+                };
+                options.splice(u, 1);
+            }
+        }
     }
 };
 
-let jw = new JunctionWest(15, 15);
+let jw = new JunctionWest(100, 100);
 
 requestAnimationFrame(function draw() {
     if (canvas.width !== window.innerWidth || canvas.height !== window.innerHeight) {
@@ -99,6 +126,3 @@ requestAnimationFrame(function draw() {
     }
     requestAnimationFrame(draw);
 });
-</script>
-  </body>
-</html>
