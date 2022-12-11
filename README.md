@@ -3,7 +3,8 @@ An exploratory work-in-progress branching function concept. The goal of this is 
 ```
 x: x value of where the branching starts on the grid,
 y: y value of where the branching starts on the grid,
-shifts: a variance value that for each shift will change the y value by 1 up or down, this value of this is the number of shifts that occur. More shifts = more variance.
+shifts: a variance value that for each shift will change the y value by 1 up or down (depending on your type parameter, it can choose [-1,1], [1], [-1]), this value of this is the number of shifts that occur. More shifts = more variance.
+type: the type value takes either 1, 2, or 3. Type 1 means shifts can either go up or down, type 2 means they can only go down, and type 3 means they can only go up.
 ```
 
 By no means is this done, however this is merely an exploratory branching concept I've come up with, and wish to expand on. For what may I use this for? I don't know. Just thought it was an interesting concept.
