@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Branching</title>
+    <style>html,body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        }
+     </style>
+   </head>
+  <body>
+    <canvas id="canvas">
+    </canvas>
+<script>
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext("2d");
 canvas.height = window.innerHeight;
@@ -84,3 +99,6 @@ requestAnimationFrame(function draw() {
     }
     requestAnimationFrame(draw);
 });
+</script>
+  </body>
+</html>
