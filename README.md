@@ -14,7 +14,7 @@ By no means is this done, however this is merely an exploratory branching concep
 ![download (1)](https://user-images.githubusercontent.com/97923189/206877809-0e4af701-7f0b-4fb3-9ec0-ef602502fbd0.png)
 shift values in order from top-bottom on a 100x100 grid: 1000, 10, 50, 25 (all type value 1).
 
-There is also an erosion function, which can be used to make mazes out of stacked branches. For example: 
+There is also an erosion function, which can be used to make maze generations or environments out of branches. For example: 
 ![download_12 (2)](https://user-images.githubusercontent.com/97923189/206946698-d7e0eefb-6aee-47eb-bf0c-a1ed66aae201.png)
 ![download_13 (2)](https://user-images.githubusercontent.com/97923189/206946707-89c36032-ee29-4f85-9e80-20e81b9605e8.png)
 ![download (15)](https://user-images.githubusercontent.com/97923189/206946756-5e201f23-05d5-4a5a-b514-64acf041f97e.png)
