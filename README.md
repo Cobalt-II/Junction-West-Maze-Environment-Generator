@@ -15,5 +15,6 @@ There is also an erosion function, which can be used to make maze generations or
 ![download_12 (2)](https://user-images.githubusercontent.com/97923189/206946698-d7e0eefb-6aee-47eb-bf0c-a1ed66aae201.png)
 ![download_13 (2)](https://user-images.githubusercontent.com/97923189/206946707-89c36032-ee29-4f85-9e80-20e81b9605e8.png)
 ![download (15)](https://user-images.githubusercontent.com/97923189/206946756-5e201f23-05d5-4a5a-b514-64acf041f97e.png)
+![download_1](https://user-images.githubusercontent.com/97923189/213959377-131804a3-82b6-4c43-80e5-984cb365e71d.png)
 
 
