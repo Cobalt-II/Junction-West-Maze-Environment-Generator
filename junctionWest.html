@@ -89,6 +89,15 @@ class JunctionWest {
             }
         }
     };
+    radius(x, y, size) {
+        for (let count in jw.grid) {
+            for (let coun in jw.grid[count]) {
+                if (Math.hypot(count - x, coun - y) < size) {
+                    jw.grid[count][coun] = 'hole'
+                }
+            }
+        }
+    };
     erode(type) {
         let options = [];
         for (let count = 0; count < this.grid.length; count++) {
