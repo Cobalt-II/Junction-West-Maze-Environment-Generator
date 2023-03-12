@@ -89,11 +89,11 @@ class JunctionWest {
             }
         }
     };
-    radius(x, y, size) {
+    radius(x, y, size, type) {
         for (let count in jw.grid) {
             for (let coun in jw.grid[count]) {
                 if (Math.hypot(count - x, coun - y) < size) {
-                    jw.grid[count][coun] = 'hole'
+                    jw.grid[count][coun] = type;
                 }
             }
         }
