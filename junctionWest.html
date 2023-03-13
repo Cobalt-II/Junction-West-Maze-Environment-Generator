@@ -90,10 +90,10 @@ class JunctionWest {
         }
     };
     radius(x, y, size, type) {
-        for (let count in jw.grid) {
-            for (let coun in jw.grid[count]) {
+        for (let count in this.grid) {
+            for (let coun in this.grid[count]) {
                 if (Math.hypot(count - x, coun - y) < size) {
-                    jw.grid[count][coun] = type;
+                    this.grid[count][coun] = type;
                 }
             }
         }
