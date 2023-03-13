@@ -89,7 +89,7 @@ class JunctionWest {
                     this.radius(count, k, Math.floor(Math.random() * (dimensions[1] - dimensions[0])) + dimensions[0], 'hole')
                 }
             };
-            if (!(count / (x + length) % relativeCircs) && count !== 0) {
+            if (!(count / (x + length) % relativeCircs) && dimensions[2].indexOf(count / (x + length)) === -1) {
                 this.radius(count, k, Math.floor(Math.random() * (dimensions[1] - dimensions[0])) + dimensions[0], 'hole')
             }
 
