@@ -1,11 +1,14 @@
 # Junction-West
-An exploratory work-in-progress branching function concept. The goal of this is to explore and visually examine a branching function that goes from left-right. Class JunctionWest creates a grid with constructor(length, height). jw is a variable that can be edited in console to edit the grid. jw.branch is the branching function of the variable. Branch takes five inputs: 
+An exploratory work-in-progress branching function concept. The goal of this is to explore and visually examine a branching function that goes from left-right. Class JunctionWest creates a grid with constructor(length, height). jw is a variable that can be edited in console to edit the grid. jw.branch is the branching function of the variable. Branch takes eight inputs: 
 ```
 x: x value of where the branching starts on the grid,
 y: y value of where the branching starts on the grid,
 shifts: a variance value that for each shift will change the y value by 1 up or down (depending on your type parameter, it can choose [-1,1], [1], [-1]), this value of this is the number of shifts that occur. More shifts = more variance.
 type: the type value takes either 1, 2, or 3. Type 1 means shifts can either go up or down, type 2 means they can only go down, and type 3 means they can only go up.
 length: the duration (in tiles) of the branch.
+directPosCircs: Array of decimal values of where along the line you want certain radius() formations to form  (leave this value as a null form if you don't want any)
+relativeCircs: A decimal value that when the (current position along branch) mod (relativeCircs) congruent to 0, creates a radius() form (leave this value as a null form if you don't want any)
+dimensions: circle dimensions in a 2 length array. First entry is the minimum size, and the second is the max size.
 ```
 
 ![download (1)](https://user-images.githubusercontent.com/97923189/206877809-0e4af701-7f0b-4fb3-9ec0-ef602502fbd0.png)
