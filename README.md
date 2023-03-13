@@ -8,7 +8,7 @@ type: the type value takes either 1, 2, or 3. Type 1 means shifts can either go 
 length: the duration (in tiles) of the branch.
 directPosCircs: Array of decimal values of where along the line you want certain radius() formations to form  (leave this value as a null form if you don't want any)
 relativeCircs: A decimal value that when the (current position along branch) mod (relativeCircs) congruent to 0 [excluding 0, you can manually add that one yourself if wanted], creates a radius() form (leave this value as a null form if you don't want any)
-dimensions: circle dimensions in a 2 length array. First entry is the minimum size, and the second is the max size.
+dimensions: circle dimensions in a 3 length array. First entry is the minimum size, and the second is the max size. The third is unrelated but used for any specific modulo values for relativeCircs you may want to cut out.
 ```
 
 ![download (1)](https://user-images.githubusercontent.com/97923189/206877809-0e4af701-7f0b-4fb3-9ec0-ef602502fbd0.png)
