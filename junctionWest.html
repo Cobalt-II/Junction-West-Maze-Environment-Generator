@@ -45,7 +45,7 @@ class JunctionWest {
             length: width
         }, () => (0))));
     };
-    branch(x, y, shifts, type, length, directPosCircs, relativeCircs, dimensions) {
+    branch(x, y, shifts, type, length, directPosCircs = [], relativeCircs = [], dimensions = [0,0,[]]) {
         let picks = [];
         let options = [];
         let offset = 0;
