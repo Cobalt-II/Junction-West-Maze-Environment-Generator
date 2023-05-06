@@ -152,7 +152,7 @@ requestAnimationFrame(function draw() {
     ctx.fillStyle = '#000000'
     for (let count in jw.grid) {
         for (let coun in jw.grid[count]) {
-            if (jw.grid[count][coun] === 'fill') {
+            if (!jw.grid[count][coun]) {
                 ctx.fillRect((window.innerWidth / jw.grid.length) * count, (window.innerHeight / jw.grid[0].length) * coun, gridX, gridY)
             }
         }
@@ -160,5 +160,5 @@ requestAnimationFrame(function draw() {
     requestAnimationFrame(draw);
 });
 </script>
-  </body>
+</body>
 </html>
