@@ -6,6 +6,7 @@ y: y value of where the branching starts on the grid,
 shifts: a variance value that for each shift will change the y value by 1 up or down (depending on your type parameter, it can choose [-1,1], [1], [-1]), this value of this is the number of shifts that occur. More shifts = more variance.
 type: the type value takes either 1, 2, or 3. Type 1 means shifts can either go up or down, type 2 means they can only go down, and type 3 means they can only go up.
 length: the duration (in tiles) of the branch.
+OPTIONALS:
 directPosCircs: Array of decimal values of where along the line you want certain radius() formations to form  (leave this value as a null form if you don't want any)
 relativeCircs: A decimal value that when the (current position along branch) mod (relativeCircs) congruent to 0 [excluding 0, you can manually add that one yourself if wanted], creates a radius() form (leave this value as a null form if you don't want any)
 dimensions: circle dimensions in a 3 length array. First entry is the minimum size, and the second is the max size. The third is unrelated but used for any specific modulo values for relativeCircs you may want to cut out.
