@@ -1,5 +1,5 @@
 # Junction-West
-An exploratory work-in-progress branching function concept. The goal of this is to explore and visually examine a branching function that goes from left-right. Class JunctionWest creates a grid with constructor(length, height). jw is a variable that can be edited in console to edit the grid. jw.branch is the branching function of the variable. Branch takes eight inputs: 
+Junction West is a tool that is designed for developing maze generation algorithms. Class JunctionWest creates a grid with constructor(length, height). jw is a variable that can be edited in console to edit the grid. jw.branch is the branching function of the variable. Branch takes eight inputs: 
 ```
 x: x value of where the branching starts on the grid,
 y: y value of where the branching starts on the grid,
