@@ -21,6 +21,6 @@ There is also an erosion function, which can be used to make maze generations or
 ![download (15)](https://user-images.githubusercontent.com/97923189/206946756-5e201f23-05d5-4a5a-b514-64acf041f97e.png)
 ![download_1](https://user-images.githubusercontent.com/97923189/213959377-131804a3-82b6-4c43-80e5-984cb365e71d.png)
 
-There is additionally also a "radius" function, which depending on the type that you enter will fill or remove a chunk of tiles based off of how far they are away from a certain coordinate.
+There is additionally also a "radius" function, which depending on the type that you enter will fill or remove a chunk of tiles based off of how far they are away from a certain coordinate. It can be used for making maps with holes of open areas in them.
 
 
