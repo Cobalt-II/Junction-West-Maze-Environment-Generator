@@ -49,9 +49,7 @@ class JunctionWest {
         let picks = [];
         let options = [];
         let offset = 0;
-        for (let count = x; count < x + length; count++) {
-            picks.push(count);
-        };
+        for (let count = x; count < x + length; count++) picks.push(count);
         for (let count = 0; count < shifts; count++) {
             let o = Math.floor(Math.random() * picks.length);
             let choice = picks[o];
@@ -77,25 +75,12 @@ class JunctionWest {
                 }
             };
             let k = y + offset;
-            if (k < 0) {
-                k = 0;
-            };
-            if (k > this.grid.length - 1) {
-                k = this.grid.length - 1;
-            }
+            if (k < 0) k = 0;
+            if (k > this.grid.length - 1) k = this.grid.length - 1;
             this.grid[count][k] = 1;
-            for (let o in directPosCircs) {
-                if (count / (x + length) === directPosCircs[o]) {
-                    this.radius(count, k, Math.floor(Math.random() * (dimensions[1] - dimensions[0])) + dimensions[0], 1)
-                }
-            };
-            if (!(count / (x + length) % relativeCircs) && dimensions[2].indexOf(count / (x + length)) === -1) {
-                this.radius(count, k, Math.floor(Math.random() * (dimensions[1] - dimensions[0])) + dimensions[0], 1)
-            }
-
-            if (flag[0]) {
-                this.grid[count][k - flag[1]] = 1;
-            }
+            for (let o in directPosCircs) if (count / (x + length) === directPosCircs[o]) this.radius(count, k, Math.floor(Math.random() * (dimensions[1] - dimensions[0])) + dimensions[0], 1);
+            if (!(count / (x + length) % relativeCircs) && dimensions[2].indexOf(count / (x + length)) === -1) this.radius(count, k, Math.floor(Math.random() * (dimensions[1] - dimensions[0])) + dimensions[0], 1);
+            if (flag[0]) this.grid[count][k - flag[1]] = 1;
         }
     };
     radius(x, y, size, type) {
@@ -114,14 +99,10 @@ class JunctionWest {
                 let flag = dir(count, coun, this.grid);
                 switch (type[0]) {
                     case 1:
-                        if (flag > 7) {
-                            this.grid[count][coun] = 0;
-                        };
+                        if (flag > 7) this.grid[count][coun] = 0;
                         break;
                     case 2:
-                        if (flag > 7) {
-                            options.push([count, coun]);
-                        };
+                        if (flag > 7) options.push([count, coun]);
                 }
             }
         };
@@ -129,9 +110,7 @@ class JunctionWest {
             for (let count = 0; count < options.length / (1 / type[1]); count++) {
                 let u = Math.floor(Math.random() * options.length);
                 let flag = dir(options[u][0], options[u][1], this.grid);
-                if (flag > 7) {
-                    this.grid[options[u][0]][options[u][1]] = 0
-                };
+                if (flag > 7) this.grid[options[u][0]][options[u][1]] = 0;
                 options.splice(u, 1);
             }
         }
